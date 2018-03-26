@@ -30,8 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +49,87 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Company.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyUser.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Integration.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationCredential.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationErrorCode.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationLog.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationMakerData.cs" />
+    <Compile Include="IntegrationMakerModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IntegrationMakerModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationMakerModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationMakerModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IntegrationMakerModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationType.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Job.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobLog.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobState.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobTransferDetail.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobType.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patials\Job.cs" />
+    <Compile Include="PredicateBulider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="IntegrationMakerModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IntegrationMakerModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="IntegrationMakerModel.edmx.diagram">
+      <DependentUpon>IntegrationMakerModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IntegrationMakerModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IntegrationMakerModel.edmx</DependentUpon>
+      <LastGenOutput>IntegrationMakerModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="IntegrationMakerModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IntegrationMakerModel.edmx</DependentUpon>
+      <LastGenOutput>IntegrationMakerModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -65,5 +65,12 @@
     <Build Include="Tables\IntegrationType.sql" />
     <Build Include="Tables\IntegrationDetail.sql" />
     <Build Include="Tables\IntegrationLog.sql" />
+    <Build Include="Tables\Job.sql" />
+    <Build Include="Tables\JobType.sql" />
+    <Build Include="Tables\JobTransferDetail.sql" />
+    <Build Include="Tables\JobState.sql" />
+    <Build Include="Tables\JobLog.sql" />
+    <Build Include="Tables\Company.sql" />
+    <Build Include="Tables\CompanyUser.sql" />
   </ItemGroup>
 </Project>
