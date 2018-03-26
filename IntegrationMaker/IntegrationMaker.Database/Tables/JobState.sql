@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[JobState]
+(
+	[Id] BIGINT NOT NULL PRIMARY KEY,
+	[Name] NVARCHAR(max) NOT NULL
+)

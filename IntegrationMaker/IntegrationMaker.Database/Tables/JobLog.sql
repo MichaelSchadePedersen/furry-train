@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[JobLog]
+(
+	[Id] BIGINT NOT NULL PRIMARY KEY,
+	[JobId] BIGINT NOT NULL,
+	[Information] NVARCHAR(MAX) NOT NULL,
+	[IsWarning] BIT NOT NULL,
+	[IsError] BIT NOT NULL,
+	[DisplayForUser] BIT NOT NULL,
+	[UTCCreated] DATETIME NOT NULL, 
+    CONSTRAINT [FK_JobLog_Job] FOREIGN KEY (JobId) REFERENCES [Job]([Id])
+
+)
