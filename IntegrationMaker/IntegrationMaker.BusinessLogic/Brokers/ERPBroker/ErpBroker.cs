@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 //using Toolpack.Shared.BusinessLogic.TaskConfiguration;
 using System.Data;
 using System.Linq.Expressions;
-using IntegrationMaker.Service.InegrationServices.Models;
+
 using IntegrationMaker.Entities;
 
 namespace IntegrationMaker.BusinessLogic.Brokers.ERPBroker

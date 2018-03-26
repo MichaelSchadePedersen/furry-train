@@ -44,6 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -73,7 +79,6 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
@@ -154,9 +159,13 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IntegrationMaker.Service\IntegrationMaker.Service.csproj">
-      <Project>{0f8b2285-e312-4f79-8f32-7164a3e46048}</Project>
-      <Name>IntegrationMaker.Service</Name>
+    <ProjectReference Include="..\IntegrationMaker.Model\IntegrationMaker.Model.csproj">
+      <Project>{c66e6b88-b21b-49ce-911c-e666721bb855}</Project>
+      <Name>IntegrationMaker.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegrationMaker.Services\IntegrationMaker.Services.csproj">
+      <Project>{fa6e9043-5100-4fe9-9123-61047c863168}</Project>
+      <Name>IntegrationMaker.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

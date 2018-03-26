@@ -10,7 +10,7 @@
       "IntegrationMaker.BusinessLogic/1.0.0": {
         "dependencies": {
           "EntityFramework": "6.2.0",
-          "IntegrationMaker.Service": "1.0.0",
+          "IntegrationMaker.Entities": "1.0.0",
           "NETStandard.Library": "2.0.0",
           "System.Data.SqlClient": "4.4.3",
           "System.ServiceModel.Http": "4.4.1",
@@ -225,14 +225,6 @@
       "IntegrationMaker.Entities/1.0.0": {
         "runtime": {
           "IntegrationMaker.Entities.dll": {}
-        }
-      },
-      "IntegrationMaker.Service/1.0.0": {
-        "dependencies": {
-          "IntegrationMaker.Entities": "1.0.0"
-        },
-        "runtime": {
-          "IntegrationMaker.Service.dll": {}
         }
       },
       "EconomicSoapService/1.0.0.0": {
@@ -466,11 +458,6 @@
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
     "IntegrationMaker.Entities/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "IntegrationMaker.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

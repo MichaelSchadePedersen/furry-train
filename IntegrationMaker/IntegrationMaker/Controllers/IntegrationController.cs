@@ -8,7 +8,6 @@ using IntegrationMaker.Models;
 using Swashbuckle.Swagger.Annotations;
 using IntegrationMaker.Service.InegrationServices;
 using IntegrationMaker.Service.InegrationServices.Concrete;
-using IntegrationMaker.Service.InegrationServices.Models;
 
 namespace IntegrationMaker.Controllers
 {

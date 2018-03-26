@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IntegrationMaker.Service\IntegrationMaker.Service.csproj" />
+    <ProjectReference Include="..\IntegrationMaker.Entities\IntegrationMaker.Entities.csproj" />
   </ItemGroup>
 
 </Project>

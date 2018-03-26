@@ -1,0 +1,5 @@
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.Model\bin\Debug\IntegrationMaker.Model.dll
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.Model\bin\Debug\IntegrationMaker.Model.pdb
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.Model\obj\Debug\IntegrationMaker.Model.csproj.CoreCompileInputs.cache
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.Model\obj\Debug\IntegrationMaker.Model.dll
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.Model\obj\Debug\IntegrationMaker.Model.pdb

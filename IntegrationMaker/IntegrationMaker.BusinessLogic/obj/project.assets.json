@@ -411,19 +411,6 @@
         "runtime": {
           "bin/placeholder/IntegrationMaker.Entities.dll": {}
         }
-      },
-      "IntegrationMaker.Service/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "IntegrationMaker.Entities": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/IntegrationMaker.Service.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IntegrationMaker.Service.dll": {}
-        }
       }
     }
   },
@@ -1933,17 +1920,12 @@
       "type": "project",
       "path": "../IntegrationMaker.Entities/IntegrationMaker.Entities.csproj",
       "msbuildProject": "../IntegrationMaker.Entities/IntegrationMaker.Entities.csproj"
-    },
-    "IntegrationMaker.Service/1.0.0": {
-      "type": "project",
-      "path": "../IntegrationMaker.Service/IntegrationMaker.Service.csproj",
-      "msbuildProject": "../IntegrationMaker.Service/IntegrationMaker.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "EntityFramework >= 6.2.0",
-      "IntegrationMaker.Service >= 1.0.0",
+      "IntegrationMaker.Entities >= 1.0.0",
       "NETStandard.Library >= 2.0.0",
       "System.Data.SqlClient >= 4.4.3",
       "System.ServiceModel.Http >= 4.4.1"
@@ -1960,11 +1942,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michael S Pedersen\\source\\repos\\furry-train\\IntegrationMaker\\IntegrationMaker.BusinessLogic\\IntegrationMaker.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\Michael S Pedersen\\Source\\Repos\\furry-train\\IntegrationMaker\\IntegrationMaker.BusinessLogic\\IntegrationMaker.BusinessLogic.csproj",
       "projectName": "IntegrationMaker.BusinessLogic",
-      "projectPath": "C:\\Users\\Michael S Pedersen\\source\\repos\\furry-train\\IntegrationMaker\\IntegrationMaker.BusinessLogic\\IntegrationMaker.BusinessLogic.csproj",
+      "projectPath": "C:\\Users\\Michael S Pedersen\\Source\\Repos\\furry-train\\IntegrationMaker\\IntegrationMaker.BusinessLogic\\IntegrationMaker.BusinessLogic.csproj",
       "packagesPath": "C:\\Users\\Michael S Pedersen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michael S Pedersen\\source\\repos\\furry-train\\IntegrationMaker\\IntegrationMaker.BusinessLogic\\obj\\",
+      "outputPath": "C:\\Users\\Michael S Pedersen\\Source\\Repos\\furry-train\\IntegrationMaker\\IntegrationMaker.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -1985,8 +1967,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Michael S Pedersen\\source\\repos\\furry-train\\IntegrationMaker\\IntegrationMaker.Service\\IntegrationMaker.Service.csproj": {
-              "projectPath": "C:\\Users\\Michael S Pedersen\\source\\repos\\furry-train\\IntegrationMaker\\IntegrationMaker.Service\\IntegrationMaker.Service.csproj"
+            "C:\\Users\\Michael S Pedersen\\Source\\Repos\\furry-train\\IntegrationMaker\\IntegrationMaker.Entities\\IntegrationMaker.Entities.csproj": {
+              "projectPath": "C:\\Users\\Michael S Pedersen\\Source\\Repos\\furry-train\\IntegrationMaker\\IntegrationMaker.Entities\\IntegrationMaker.Entities.csproj"
             }
           }
         }
