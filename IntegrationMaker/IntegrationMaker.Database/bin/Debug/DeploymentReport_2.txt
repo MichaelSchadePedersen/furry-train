@@ -1,0 +1,20 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[JobLog] (Table)
+       [dbo].[JobState] (Table)
+       [dbo].[JobTransferDetail] (Table)
+       [dbo].[JobType] (Table)
+       [dbo].[FK_JobLog_Job] (Foreign Key)
+       [dbo].[FK_JobTransferDetail_Job] (Foreign Key)
+
+** Supporting actions

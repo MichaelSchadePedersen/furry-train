@@ -1,0 +1,31 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Integration]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Integration].[IsRunning] on table [dbo].[Integration] must be added, but the column has no default
+         value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue
+         you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+
+** User actions
+     Table rebuild
+       [dbo].[Integration] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_IntegrationLog_Integration] (Foreign Key)
+       [dbo].[FK_IntegrationCredential_Integration] (Foreign Key)
+       [dbo].[FK_Integration_IntegrationType] (Foreign Key)
+       [dbo].[FK_Integration_Company] (Foreign Key)
+     Create
+       [dbo].[FK_IntegrationLog_Integration] (Foreign Key)
+       [dbo].[FK_IntegrationCredential_Integration] (Foreign Key)
+       [dbo].[FK_Integration_IntegrationType] (Foreign Key)
+       [dbo].[FK_Integration_Company] (Foreign Key)
+
+The column [dbo].[Integration].[IsRunning] on table [dbo].[Integration] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

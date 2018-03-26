@@ -1,0 +1,25 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Integration]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Integration] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_IntegrationLog_Integration] (Foreign Key)
+       [dbo].[FK_IntegrationCredential_Integration] (Foreign Key)
+       [dbo].[FK_Integration_IntegrationType] (Foreign Key)
+       [dbo].[FK_Integration_Company] (Foreign Key)
+     Create
+       [dbo].[FK_IntegrationLog_Integration] (Foreign Key)
+       [dbo].[FK_IntegrationCredential_Integration] (Foreign Key)
+       [dbo].[FK_Integration_IntegrationType] (Foreign Key)
+       [dbo].[FK_Integration_Company] (Foreign Key)
