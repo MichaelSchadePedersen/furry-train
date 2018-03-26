@@ -1,0 +1,15 @@
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\obj\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\obj\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\obj\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\obj\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.AssemblyInfo.cs
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.deps.json
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.dll
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\EconomicSoapService.dll
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\IntegrationMaker.Entities.dll
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\IntegrationMaker.Service.dll
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\IntegrationMaker.Service.pdb
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\IntegrationMaker.Entities.pdb
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\IntegrationMaker.Entities.dll.config
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\bin\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.pdb
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\obj\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.BusinessLogic\obj\Debug\netstandard2.0\IntegrationMaker.BusinessLogic.pdb
