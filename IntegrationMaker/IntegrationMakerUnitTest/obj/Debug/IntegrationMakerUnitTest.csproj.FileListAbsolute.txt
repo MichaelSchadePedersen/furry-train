@@ -1,0 +1,13 @@
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\IntegrationMakerUnitTest.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\IntegrationMakerUnitTest.pdb
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\obj\Debug\IntegrationMakerUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\obj\Debug\IntegrationMakerUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\obj\Debug\IntegrationMakerUnitTest.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMakerUnitTest\obj\Debug\IntegrationMakerUnitTest.pdb

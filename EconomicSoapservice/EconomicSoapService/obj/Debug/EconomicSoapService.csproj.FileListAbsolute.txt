@@ -1,0 +1,17 @@
+C:\Toolpack\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.csprojResolveAssemblyReference.cache
+C:\Toolpack\EconomicSoapservice\EconomicSoapService\bin\Debug\EconomicSoapService.pdb
+C:\Toolpack\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.pdb
+C:\Toolpack\EconomicSoapservice\EconomicSoapService\bin\Debug\EconomicSoapService.dll.config
+C:\Toolpack\EconomicSoapservice\EconomicSoapService\bin\Debug\EconomicSoapService.dll
+C:\Toolpack\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.dll
+P:\mip\Toolpack\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.csprojResolveAssemblyReference.cache
+P:\mip\Toolpack\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.csproj.CoreCompileInputs.cache
+P:\mip\Toolpack\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.dll
+P:\mip\Toolpack\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.pdb
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.csprojResolveAssemblyReference.cache
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.csproj.CoreCompileInputs.cache
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.dll
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\EconomicSoapService\obj\Debug\EconomicSoapService.pdb
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\EconomicSoapService\bin\Debug\EconomicSoapService.dll.config
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\EconomicSoapService\bin\Debug\EconomicSoapService.dll
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\EconomicSoapService\bin\Debug\EconomicSoapService.pdb

@@ -1,0 +1,11 @@
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\bin\Debug\IntegrationMaker.Entities.dll.config
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\bin\Debug\IntegrationMaker.Entities.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\bin\Debug\IntegrationMaker.Entities.pdb
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\obj\Debug\IntegrationMaker.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\obj\Debug\IntegrationMaker.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\obj\Debug\IntegrationMaker.Entities.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Entities\obj\Debug\IntegrationMaker.Entities.pdb

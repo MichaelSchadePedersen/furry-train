@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IntegrationMakerModelStoreContainer" CdmEntityContainer="IntegrationMakerEntities">
+    <EntitySetMapping Name="Integrations">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.Integration">
+        <MappingFragment StoreEntitySet="Integration">
+          <ScalarProperty Name="LastFullDataImortUTC" ColumnName="LastFullDataImortUTC" />
+          <ScalarProperty Name="LastIncrementalDataImortUTC" ColumnName="LastIncrementalDataImortUTC" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="IsRunning" ColumnName="IsRunning" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="ExternalNumber" ColumnName="ExternalNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IntegrationTypeId" ColumnName="IntegrationTypeId" />
+          <ScalarProperty Name="CreatedUTC" ColumnName="CreatedUTC" />
+          <ScalarProperty Name="LastModifiedUTC" ColumnName="LastModifiedUTC" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IntegrationCredentials">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.IntegrationCredential">
+        <MappingFragment StoreEntitySet="IntegrationCredential">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountIdentifier" ColumnName="AccountIdentifier" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="IntegrationId" ColumnName="IntegrationId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="CratedUTC" ColumnName="CratedUTC" />
+          <ScalarProperty Name="LastModifiedUTC" ColumnName="LastModifiedUTC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IntegrationErrorCodes">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.IntegrationErrorCode">
+        <MappingFragment StoreEntitySet="IntegrationErrorCode">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserfriendlyDescreption" ColumnName="UserfriendlyDescreption" />
+          <ScalarProperty Name="TechnicalDescription" ColumnName="TechnicalDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IntegrationTypes">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.IntegrationType">
+        <MappingFragment StoreEntitySet="IntegrationType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedUTC" ColumnName="CreatedUTC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IntegrationLogs">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.IntegrationLog">
+        <MappingFragment StoreEntitySet="IntegrationLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IntegrationId" ColumnName="IntegrationId" />
+          <ScalarProperty Name="IntegrationErrorNumber" ColumnName="IntegrationErrorNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="IsMonitored" ColumnName="IsMonitored" />
+          <ScalarProperty Name="UTCFinished" ColumnName="UTCFinished" />
+          <ScalarProperty Name="UTCStarted" ColumnName="UTCStarted" />
+          <ScalarProperty Name="UTCCreated" ColumnName="UTCCreated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ErpIntegrationErrorCode" ColumnName="ErpIntegrationErrorCode" />
+          <ScalarProperty Name="NotifyWhenComplete" ColumnName="NotifyWhenComplete" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="JobStateId" ColumnName="JobStateId" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="TargetId" ColumnName="TargetId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobLogs">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.JobLog">
+        <MappingFragment StoreEntitySet="JobLog">
+          <ScalarProperty Name="UTCCreated" ColumnName="UTCCreated" />
+          <ScalarProperty Name="DisplayForUser" ColumnName="DisplayForUser" />
+          <ScalarProperty Name="IsError" ColumnName="IsError" />
+          <ScalarProperty Name="IsWarning" ColumnName="IsWarning" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobStates">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.JobState">
+        <MappingFragment StoreEntitySet="JobState">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTransferDetails">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.JobTransferDetail">
+        <MappingFragment StoreEntitySet="JobTransferDetail">
+          <ScalarProperty Name="RowsTransferred" ColumnName="RowsTransferred" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTypes">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.JobType">
+        <MappingFragment StoreEntitySet="JobType">
+          <ScalarProperty Name="TargetType" ColumnName="TargetType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyUsers">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.CompanyUser">
+        <MappingFragment StoreEntitySet="CompanyUser">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
