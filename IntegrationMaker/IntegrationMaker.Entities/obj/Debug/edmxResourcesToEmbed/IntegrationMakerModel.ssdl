@@ -15,6 +15,16 @@
     <Property Name="Name" Type="nvarchar" MaxLength="1000" Nullable="false" />
     <Property Name="CompanyId" Type="bigint" Nullable="false" />
   </EntityType>
+  <EntityType Name="EconomicAPP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="AppSecretToken" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="RequestURL" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="AppPublicToken" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
   <EntityType Name="Integration">
     <Key>
       <PropertyRef Name="Id" />
@@ -225,6 +235,7 @@ warning 6002: The table/view 'IntegrationMaker.dbo.IntegrationLog' does not have
   <EntityContainer Name="IntegrationMakerModelStoreContainer">
     <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CompanyUser" EntityType="Self.CompanyUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EconomicAPP" EntityType="Self.EconomicAPP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Integration" EntityType="Self.Integration" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="IntegrationCredential" EntityType="Self.IntegrationCredential" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="IntegrationErrorCode" EntityType="Self.IntegrationErrorCode" Schema="dbo" store:Type="Tables" />

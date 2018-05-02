@@ -55,6 +55,9 @@
     <Compile Include="CompanyUser.cs">
       <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EconomicAPP.cs">
+      <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Integration.cs">
       <DependentUpon>IntegrationMakerModel.tt</DependentUpon>
     </Compile>

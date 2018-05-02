@@ -158,6 +158,7 @@
       <End Role="Company" EntitySet="Companies" />
       <End Role="Integration" EntitySet="Integrations" />
     </AssociationSet>
+    <EntitySet Name="EconomicAPPs" EntityType="IntegrationMakerModel.EconomicAPP" />
   </EntityContainer>
   <EntityType Name="Job">
     <Key>
@@ -282,4 +283,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="EconomicAPP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AppSecretToken" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RequestURL" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AppPublicToken" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

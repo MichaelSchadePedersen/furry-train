@@ -1,6 +1,7 @@
 ﻿
 using IntegrationMaker.BusinessLogic.Brokers.ERPBroker;
-using IntegrationMaker.Models;
+using IntegrationMaker.Entities;
+using IntegrationMaker.Model;
 
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,10 @@ namespace IntegrationMaker.Service.InegrationServices.Concrete
    {
         public CreateIntegrationService()
         { }
-        public IntegrationModel CreateIntegration(IntegrationModel integrationModel)
+        public async System.Threading.Tasks.Task<IntegrationModel> CreateIntegrationAsync(IntegrationModel integrationModel)
         {
-          var t =  ErpBroker.ImportType.Full;
+            var broker = ErpBroker.GetInstance(integrationModel, integrationModel.IntegrationCredentialModel);
+            await broker.VerifyIntegration();
             return integrationModel;
         }
     }

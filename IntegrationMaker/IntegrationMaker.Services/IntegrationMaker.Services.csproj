@@ -40,14 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRMServices\Concrete\InsertRecordService.cs" />
     <Compile Include="IntegrationServices\Concrete\CreateIntegrationService.cs" />
+    <Compile Include="IntegrationServices\Concrete\GetIntegrationTypeService.cs" />
     <Compile Include="IntegrationServices\Concrete\GetIntegrationService.cs" />
+    <Compile Include="IntegrationServices\Concrete\ValidateIntegrationModelService.cs" />
     <Compile Include="IntegrationServices\Concrete\VeriyIntegrationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IntegrationMaker.BusinessLogic\IntegrationMaker.BusinessLogic.csproj">
-      <Project>{00CB2854-23A4-433D-8F05-BCCADE6F6A60}</Project>
+    <ProjectReference Include="..\IntegrationMaker.BusinessLogics\IntegrationMaker.BusinessLogic.csproj">
+      <Project>{000b8d75-6c1e-4505-9e61-60d62aaad3bf}</Project>
       <Name>IntegrationMaker.BusinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\IntegrationMaker.Entities\IntegrationMaker.Entities.csproj">

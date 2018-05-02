@@ -25,6 +25,7 @@
         <EntityTypeShape EntityType="IntegrationMakerModel.CompanyUser" Width="1.5" PointX="7.125" PointY="0.5" FillColor="Red" />
         <AssociationConnector Association="IntegrationMakerModel.FK_CompanyUser_Company" />
         <AssociationConnector Association="IntegrationMakerModel.FK_Integration_Company" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.EconomicAPP" Width="1.5" PointX="5.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

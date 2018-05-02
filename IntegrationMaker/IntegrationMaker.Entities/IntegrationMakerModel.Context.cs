@@ -37,5 +37,6 @@ namespace IntegrationMaker.Entities
         public virtual DbSet<JobType> JobTypes { get; set; }
         public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<CompanyUser> CompanyUsers { get; set; }
+        public virtual DbSet<EconomicAPP> EconomicAPPs { get; set; }
     }
 }

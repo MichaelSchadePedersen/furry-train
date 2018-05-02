@@ -1,5 +1,5 @@
 ﻿using IntegrationMaker.Entities;
-using IntegrationMaker.Models;
+using IntegrationMaker.Model;
 
 using System;
 using System.Collections.Generic;

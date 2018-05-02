@@ -72,5 +72,11 @@
     <Build Include="Tables\JobLog.sql" />
     <Build Include="Tables\Company.sql" />
     <Build Include="Tables\CompanyUser.sql" />
+    <Build Include="Tables\EconomicAPP.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="StaticData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </PostDeploy>
   </ItemGroup>
 </Project>

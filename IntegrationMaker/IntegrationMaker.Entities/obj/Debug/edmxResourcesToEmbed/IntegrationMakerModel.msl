@@ -136,5 +136,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="EconomicAPPs">
+      <EntityTypeMapping TypeName="IntegrationMakerModel.EconomicAPP">
+        <MappingFragment StoreEntitySet="EconomicAPP">
+          <ScalarProperty Name="AppPublicToken" ColumnName="AppPublicToken" />
+          <ScalarProperty Name="RequestURL" ColumnName="RequestURL" />
+          <ScalarProperty Name="AppSecretToken" ColumnName="AppSecretToken" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

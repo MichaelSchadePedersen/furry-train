@@ -20,6 +20,16 @@
           <Property Name="Name" Type="nvarchar" MaxLength="1000" Nullable="false" />
           <Property Name="CompanyId" Type="bigint" Nullable="false" />
         </EntityType>
+        <EntityType Name="EconomicAPP">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="AppSecretToken" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="RequestURL" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="AppPublicToken" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
         <EntityType Name="Integration">
           <Key>
             <PropertyRef Name="Id" />
@@ -230,6 +240,7 @@ warning 6002: The table/view 'IntegrationMaker.dbo.IntegrationLog' does not have
         <EntityContainer Name="IntegrationMakerModelStoreContainer">
           <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CompanyUser" EntityType="Self.CompanyUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EconomicAPP" EntityType="Self.EconomicAPP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Integration" EntityType="Self.Integration" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="IntegrationCredential" EntityType="Self.IntegrationCredential" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="IntegrationErrorCode" EntityType="Self.IntegrationErrorCode" Schema="dbo" store:Type="Tables" />
@@ -441,6 +452,7 @@ warning 6002: The table/view 'IntegrationMaker.dbo.IntegrationLog' does not have
             <End Role="Company" EntitySet="Companies" />
             <End Role="Integration" EntitySet="Integrations" />
           </AssociationSet>
+          <EntitySet Name="EconomicAPPs" EntityType="IntegrationMakerModel.EconomicAPP" />
         </EntityContainer>
         <EntityType Name="Job">
           <Key>
@@ -565,6 +577,16 @@ warning 6002: The table/view 'IntegrationMaker.dbo.IntegrationLog' does not have
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="EconomicAPP">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AppSecretToken" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RequestURL" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AppPublicToken" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -701,6 +723,17 @@ warning 6002: The table/view 'IntegrationMaker.dbo.IntegrationLog' does not have
             <EntityTypeMapping TypeName="IntegrationMakerModel.CompanyUser">
               <MappingFragment StoreEntitySet="CompanyUser">
                 <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EconomicAPPs">
+            <EntityTypeMapping TypeName="IntegrationMakerModel.EconomicAPP">
+              <MappingFragment StoreEntitySet="EconomicAPP">
+                <ScalarProperty Name="AppPublicToken" ColumnName="AppPublicToken" />
+                <ScalarProperty Name="RequestURL" ColumnName="RequestURL" />
+                <ScalarProperty Name="AppSecretToken" ColumnName="AppSecretToken" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
