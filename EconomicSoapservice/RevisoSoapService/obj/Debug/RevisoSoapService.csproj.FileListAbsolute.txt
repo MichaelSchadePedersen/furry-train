@@ -1,0 +1,12 @@
+C:\Toolpack\EconomicSoapservice\RevisoSoapService\bin\Debug\RevisoSoapService.pdb
+C:\Toolpack\EconomicSoapservice\RevisoSoapService\obj\Debug\RevisoSoapService.pdb
+C:\Toolpack\EconomicSoapservice\RevisoSoapService\bin\Debug\RevisoSoapService.dll.config
+C:\Toolpack\EconomicSoapservice\RevisoSoapService\bin\Debug\RevisoSoapService.dll
+C:\Toolpack\EconomicSoapservice\RevisoSoapService\obj\Debug\RevisoSoapService.dll
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\RevisoSoapService\bin\Debug\RevisoSoapService.dll.config
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\RevisoSoapService\bin\Debug\RevisoSoapService.dll
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\RevisoSoapService\bin\Debug\RevisoSoapService.pdb
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\RevisoSoapService\obj\Debug\RevisoSoapService.csprojResolveAssemblyReference.cache
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\RevisoSoapService\obj\Debug\RevisoSoapService.csproj.CoreCompileInputs.cache
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\RevisoSoapService\obj\Debug\RevisoSoapService.dll
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\RevisoSoapService\obj\Debug\RevisoSoapService.pdb

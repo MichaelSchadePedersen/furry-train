@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IntegrationMakerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="CompanyUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="CompanyId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EconomicAPP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="AppSecretToken" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="RequestURL" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="AppPublicToken" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Integration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntegrationTypeId" Type="bigint" Nullable="false" />
+    <Property Name="CompanyId" Type="bigint" Nullable="false" />
+    <Property Name="CreatedUTC" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedUTC" Type="datetime" />
+    <Property Name="IsRunning" Type="bit" Nullable="false" />
+    <Property Name="ErrorCode" Type="int" Nullable="false" />
+    <Property Name="LastIncrementalDataImortUTC" Type="datetime" />
+    <Property Name="LastFullDataImortUTC" Type="datetime" />
+    <Property Name="Name" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ExternalNumber" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IntegrationCredential">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountIdentifier" Type="nvarchar" MaxLength="500" />
+    <Property Name="Username" Type="nvarchar" MaxLength="500" />
+    <Property Name="IntegrationId" Type="bigint" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="500" />
+    <Property Name="Token" Type="nvarchar" MaxLength="100" />
+    <Property Name="CratedUTC" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedUTC" Type="datetime" />
+  </EntityType>
+  <EntityType Name="IntegrationErrorCode">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="UserfriendlyDescreption" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TechnicalDescription" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IntegrationMaker.dbo.IntegrationLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IntegrationLog">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="IntegrationId" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntegrationId" Type="bigint" Nullable="false" />
+    <Property Name="IntegrationErrorNumber" Type="bigint" />
+  </EntityType>
+  <EntityType Name="IntegrationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreatedUTC" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TargetId" Type="bigint" Nullable="false" />
+    <Property Name="JobTypeId" Type="bigint" Nullable="false" />
+    <Property Name="JobStateId" Type="bigint" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="NotifyWhenComplete" Type="bit" Nullable="false" />
+    <Property Name="ErpIntegrationErrorCode" Type="int" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="UTCCreated" Type="datetime" Nullable="false" />
+    <Property Name="UTCStarted" Type="datetime" />
+    <Property Name="UTCFinished" Type="datetime" />
+    <Property Name="IsMonitored" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="JobId" Type="bigint" Nullable="false" />
+    <Property Name="Information" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsWarning" Type="bit" Nullable="false" />
+    <Property Name="IsError" Type="bit" Nullable="false" />
+    <Property Name="DisplayForUser" Type="bit" Nullable="false" />
+    <Property Name="UTCCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobState">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobTransferDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="JobId" Type="bigint" Nullable="false" />
+    <Property Name="TableName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RowsTransferred" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="TargetType" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_CompanyUser_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="CompanyUser" Type="Self.CompanyUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CompanyUser">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Integration_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Integration" Type="Self.Integration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Integration">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Integration_IntegrationType">
+    <End Role="IntegrationType" Type="Self.IntegrationType" Multiplicity="1" />
+    <End Role="Integration" Type="Self.Integration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IntegrationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Integration">
+        <PropertyRef Name="IntegrationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IntegrationCredential_Integration">
+    <End Role="Integration" Type="Self.Integration" Multiplicity="1" />
+    <End Role="IntegrationCredential" Type="Self.IntegrationCredential" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Integration">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IntegrationCredential">
+        <PropertyRef Name="IntegrationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IntegrationLog_Integration">
+    <End Role="Integration" Type="Self.Integration" Multiplicity="1" />
+    <End Role="IntegrationLog" Type="Self.IntegrationLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Integration">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IntegrationLog">
+        <PropertyRef Name="IntegrationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IntegrationLog_IntegrationErrorCode">
+    <End Role="IntegrationErrorCode" Type="Self.IntegrationErrorCode" Multiplicity="0..1" />
+    <End Role="IntegrationLog" Type="Self.IntegrationLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IntegrationErrorCode">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="IntegrationLog">
+        <PropertyRef Name="IntegrationErrorNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobLog_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1" />
+    <End Role="JobLog" Type="Self.JobLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobLog">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobTransferDetail_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1" />
+    <End Role="JobTransferDetail" Type="Self.JobTransferDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobTransferDetail">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IntegrationMakerModelStoreContainer">
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyUser" EntityType="Self.CompanyUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EconomicAPP" EntityType="Self.EconomicAPP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Integration" EntityType="Self.Integration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IntegrationCredential" EntityType="Self.IntegrationCredential" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IntegrationErrorCode" EntityType="Self.IntegrationErrorCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IntegrationType" EntityType="Self.IntegrationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobLog" EntityType="Self.JobLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobState" EntityType="Self.JobState" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobTransferDetail" EntityType="Self.JobTransferDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobType" EntityType="Self.JobType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IntegrationLog" EntityType="Self.IntegrationLog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IntegrationLog].[Id] AS [Id], 
+    [IntegrationLog].[IntegrationId] AS [IntegrationId], 
+    [IntegrationLog].[IntegrationErrorNumber] AS [IntegrationErrorNumber]
+    FROM [dbo].[IntegrationLog] AS [IntegrationLog]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CompanyUser_Company" Association="Self.FK_CompanyUser_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="CompanyUser" EntitySet="CompanyUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Integration_Company" Association="Self.FK_Integration_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Integration" EntitySet="Integration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Integration_IntegrationType" Association="Self.FK_Integration_IntegrationType">
+      <End Role="IntegrationType" EntitySet="IntegrationType" />
+      <End Role="Integration" EntitySet="Integration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IntegrationCredential_Integration" Association="Self.FK_IntegrationCredential_Integration">
+      <End Role="Integration" EntitySet="Integration" />
+      <End Role="IntegrationCredential" EntitySet="IntegrationCredential" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IntegrationLog_Integration" Association="Self.FK_IntegrationLog_Integration">
+      <End Role="Integration" EntitySet="Integration" />
+      <End Role="IntegrationLog" EntitySet="IntegrationLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IntegrationLog_IntegrationErrorCode" Association="Self.FK_IntegrationLog_IntegrationErrorCode">
+      <End Role="IntegrationErrorCode" EntitySet="IntegrationErrorCode" />
+      <End Role="IntegrationLog" EntitySet="IntegrationLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobLog_Job" Association="Self.FK_JobLog_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="JobLog" EntitySet="JobLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobTransferDetail_Job" Association="Self.FK_JobTransferDetail_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="JobTransferDetail" EntitySet="JobTransferDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

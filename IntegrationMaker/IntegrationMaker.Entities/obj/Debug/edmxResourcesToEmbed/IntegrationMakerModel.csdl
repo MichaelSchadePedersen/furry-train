@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IntegrationMakerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Integration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IntegrationTypeId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedUTC" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastModifiedUTC" Type="DateTime" Precision="3" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="IntegrationType" Relationship="Self.FK_Integration_IntegrationType" FromRole="Integration" ToRole="IntegrationType" />
+    <NavigationProperty Name="IntegrationCredentials" Relationship="Self.FK_IntegrationCredential_Integration" FromRole="Integration" ToRole="IntegrationCredential" />
+    <NavigationProperty Name="IntegrationLogs" Relationship="Self.FK_IntegrationLog_Integration" FromRole="Integration" ToRole="IntegrationLog" />
+    <Property Name="ExternalNumber" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Company" Relationship="IntegrationMakerModel.FK_Integration_Company" FromRole="Integration" ToRole="Company" />
+    <Property Name="IsRunning" Type="Boolean" Nullable="false" />
+    <Property Name="ErrorCode" Type="Int32" Nullable="false" />
+    <Property Name="LastIncrementalDataImortUTC" Type="DateTime" Precision="3" />
+    <Property Name="LastFullDataImortUTC" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="IntegrationCredential">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountIdentifier" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IntegrationId" Type="Int64" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Token" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CratedUTC" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastModifiedUTC" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Integration" Relationship="Self.FK_IntegrationCredential_Integration" FromRole="IntegrationCredential" ToRole="Integration" />
+  </EntityType>
+  <EntityType Name="IntegrationErrorCode">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserfriendlyDescreption" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TechnicalDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="IntegrationLogs" Relationship="Self.FK_IntegrationLog_IntegrationErrorCode" FromRole="IntegrationErrorCode" ToRole="IntegrationLog" />
+  </EntityType>
+  <EntityType Name="IntegrationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedUTC" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Integrations" Relationship="Self.FK_Integration_IntegrationType" FromRole="IntegrationType" ToRole="Integration" />
+  </EntityType>
+  <EntityType Name="IntegrationLog">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="IntegrationId" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IntegrationId" Type="Int64" Nullable="false" />
+    <Property Name="IntegrationErrorNumber" Type="Int64" />
+    <NavigationProperty Name="Integration" Relationship="Self.FK_IntegrationLog_Integration" FromRole="IntegrationLog" ToRole="Integration" />
+    <NavigationProperty Name="IntegrationErrorCode" Relationship="Self.FK_IntegrationLog_IntegrationErrorCode" FromRole="IntegrationLog" ToRole="IntegrationErrorCode" />
+  </EntityType>
+  <Association Name="FK_Integration_IntegrationType">
+    <End Role="IntegrationType" Type="Self.IntegrationType" Multiplicity="1" />
+    <End Role="Integration" Type="Self.Integration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IntegrationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Integration">
+        <PropertyRef Name="IntegrationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IntegrationCredential_Integration">
+    <End Role="Integration" Type="Self.Integration" Multiplicity="1" />
+    <End Role="IntegrationCredential" Type="Self.IntegrationCredential" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Integration">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IntegrationCredential">
+        <PropertyRef Name="IntegrationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IntegrationLog_Integration">
+    <End Role="Integration" Type="Self.Integration" Multiplicity="1" />
+    <End Role="IntegrationLog" Type="Self.IntegrationLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Integration">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IntegrationLog">
+        <PropertyRef Name="IntegrationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IntegrationLog_IntegrationErrorCode">
+    <End Role="IntegrationErrorCode" Type="Self.IntegrationErrorCode" Multiplicity="0..1" />
+    <End Role="IntegrationLog" Type="Self.IntegrationLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IntegrationErrorCode">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="IntegrationLog">
+        <PropertyRef Name="IntegrationErrorNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IntegrationMakerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Integrations" EntityType="Self.Integration" />
+    <EntitySet Name="IntegrationCredentials" EntityType="Self.IntegrationCredential" />
+    <EntitySet Name="IntegrationErrorCodes" EntityType="Self.IntegrationErrorCode" />
+    <EntitySet Name="IntegrationTypes" EntityType="Self.IntegrationType" />
+    <EntitySet Name="IntegrationLogs" EntityType="Self.IntegrationLog" />
+    <AssociationSet Name="FK_Integration_IntegrationType" Association="Self.FK_Integration_IntegrationType">
+      <End Role="IntegrationType" EntitySet="IntegrationTypes" />
+      <End Role="Integration" EntitySet="Integrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IntegrationCredential_Integration" Association="Self.FK_IntegrationCredential_Integration">
+      <End Role="Integration" EntitySet="Integrations" />
+      <End Role="IntegrationCredential" EntitySet="IntegrationCredentials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IntegrationLog_Integration" Association="Self.FK_IntegrationLog_Integration">
+      <End Role="Integration" EntitySet="Integrations" />
+      <End Role="IntegrationLog" EntitySet="IntegrationLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IntegrationLog_IntegrationErrorCode" Association="Self.FK_IntegrationLog_IntegrationErrorCode">
+      <End Role="IntegrationErrorCode" EntitySet="IntegrationErrorCodes" />
+      <End Role="IntegrationLog" EntitySet="IntegrationLogs" />
+    </AssociationSet>
+    <EntitySet Name="Jobs" EntityType="IntegrationMakerModel.Job" />
+    <EntitySet Name="JobLogs" EntityType="IntegrationMakerModel.JobLog" />
+    <EntitySet Name="JobStates" EntityType="IntegrationMakerModel.JobState" />
+    <EntitySet Name="JobTransferDetails" EntityType="IntegrationMakerModel.JobTransferDetail" />
+    <EntitySet Name="JobTypes" EntityType="IntegrationMakerModel.JobType" />
+    <AssociationSet Name="FK_JobLog_Job" Association="IntegrationMakerModel.FK_JobLog_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="JobLog" EntitySet="JobLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobTransferDetail_Job" Association="IntegrationMakerModel.FK_JobTransferDetail_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="JobTransferDetail" EntitySet="JobTransferDetails" />
+    </AssociationSet>
+    <EntitySet Name="Companies" EntityType="IntegrationMakerModel.Company" />
+    <EntitySet Name="CompanyUsers" EntityType="IntegrationMakerModel.CompanyUser" />
+    <AssociationSet Name="FK_CompanyUser_Company" Association="IntegrationMakerModel.FK_CompanyUser_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="CompanyUser" EntitySet="CompanyUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Integration_Company" Association="IntegrationMakerModel.FK_Integration_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Integration" EntitySet="Integrations" />
+    </AssociationSet>
+    <EntitySet Name="EconomicAPPs" EntityType="IntegrationMakerModel.EconomicAPP" />
+  </EntityContainer>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TargetId" Type="Int64" Nullable="false" />
+    <Property Name="JobTypeId" Type="Int64" Nullable="false" />
+    <Property Name="JobStateId" Type="Int64" Nullable="false" />
+    <Property Name="UserId" Type="Int64" />
+    <Property Name="NotifyWhenComplete" Type="Boolean" Nullable="false" />
+    <Property Name="ErpIntegrationErrorCode" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UTCCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UTCStarted" Type="DateTime" Precision="3" />
+    <Property Name="UTCFinished" Type="DateTime" Precision="3" />
+    <Property Name="IsMonitored" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="JobLogs" Relationship="IntegrationMakerModel.FK_JobLog_Job" FromRole="Job" ToRole="JobLog" />
+    <NavigationProperty Name="JobTransferDetails" Relationship="IntegrationMakerModel.FK_JobTransferDetail_Job" FromRole="Job" ToRole="JobTransferDetail" />
+  </EntityType>
+  <EntityType Name="JobLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="JobId" Type="Int64" Nullable="false" />
+    <Property Name="Information" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsWarning" Type="Boolean" Nullable="false" />
+    <Property Name="IsError" Type="Boolean" Nullable="false" />
+    <Property Name="DisplayForUser" Type="Boolean" Nullable="false" />
+    <Property Name="UTCCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Job" Relationship="IntegrationMakerModel.FK_JobLog_Job" FromRole="JobLog" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="JobState">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="JobTransferDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="JobId" Type="Int64" Nullable="false" />
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RowsTransferred" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Job" Relationship="IntegrationMakerModel.FK_JobTransferDetail_Job" FromRole="JobTransferDetail" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="JobType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TargetType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_JobLog_Job">
+    <End Type="IntegrationMakerModel.Job" Role="Job" Multiplicity="1" />
+    <End Type="IntegrationMakerModel.JobLog" Role="JobLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobLog">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobTransferDetail_Job">
+    <End Type="IntegrationMakerModel.Job" Role="Job" Multiplicity="1" />
+    <End Type="IntegrationMakerModel.JobTransferDetail" Role="JobTransferDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobTransferDetail">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CompanyUsers" Relationship="IntegrationMakerModel.FK_CompanyUser_Company" FromRole="Company" ToRole="CompanyUser" />
+    <NavigationProperty Name="Integrations" Relationship="IntegrationMakerModel.FK_Integration_Company" FromRole="Company" ToRole="Integration" />
+  </EntityType>
+  <EntityType Name="CompanyUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Company" Relationship="IntegrationMakerModel.FK_CompanyUser_Company" FromRole="CompanyUser" ToRole="Company" />
+  </EntityType>
+  <Association Name="FK_CompanyUser_Company">
+    <End Type="IntegrationMakerModel.Company" Role="Company" Multiplicity="1" />
+    <End Type="IntegrationMakerModel.CompanyUser" Role="CompanyUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CompanyUser">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Integration_Company">
+    <End Type="IntegrationMakerModel.Company" Role="Company" Multiplicity="1" />
+    <End Type="IntegrationMakerModel.Integration" Role="Integration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Integration">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EconomicAPP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AppSecretToken" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RequestURL" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AppPublicToken" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

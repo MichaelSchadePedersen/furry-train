@@ -1,0 +1,6 @@
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Database\bin\Debug\IntegrationMaker.Database.dacpac
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Database\obj\Debug\IntegrationMaker.Database.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Database\obj\Debug\IntegrationMaker.Database.pdb
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Database\bin\Debug\IntegrationMaker.Database.dll
+C:\Users\Michael S Pedersen\source\repos\furry-train\IntegrationMaker\IntegrationMaker.Database\bin\Debug\IntegrationMaker.Database.pdb
+C:\Users\Michael S Pedersen\Source\Repos\furry-train\IntegrationMaker\IntegrationMaker.Database\bin\Debug\StaticData.sql

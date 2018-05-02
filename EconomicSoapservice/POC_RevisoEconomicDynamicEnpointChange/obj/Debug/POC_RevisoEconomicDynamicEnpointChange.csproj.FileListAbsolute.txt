@@ -1,0 +1,2 @@
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\POC_RevisoEconomicDynamicEnpointChange\obj\Debug\POC_RevisoEconomicDynamicEnpointChange.csprojResolveAssemblyReference.cache
+C:\Users\Michael Pedersen\Desktop\EconomicSoapservice\POC_RevisoEconomicDynamicEnpointChange\obj\Debug\POC_RevisoEconomicDynamicEnpointChange.csproj.CoreCompileInputs.cache

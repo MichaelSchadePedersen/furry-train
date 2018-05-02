@@ -1,0 +1,34 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Integration]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Integration].[CompanyId] on table [dbo].[Integration] must be added, but the column has no default
+         value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue
+         you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+
+** User actions
+     Table rebuild
+       [dbo].[Integration] (Table)
+     Create
+       [dbo].[Company] (Table)
+       [dbo].[CompanyUser] (Table)
+       [dbo].[FK_Integration_Company] (Foreign Key)
+       [dbo].[FK_CompanyUser_Company] (Foreign Key)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_IntegrationLog_Integration] (Foreign Key)
+       [dbo].[FK_IntegrationCredential_Integration] (Foreign Key)
+       [dbo].[FK_Integration_IntegrationType] (Foreign Key)
+     Create
+       [dbo].[FK_IntegrationLog_Integration] (Foreign Key)
+       [dbo].[FK_IntegrationCredential_Integration] (Foreign Key)
+       [dbo].[FK_Integration_IntegrationType] (Foreign Key)
+
+The column [dbo].[Integration].[CompanyId] on table [dbo].[Integration] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6d401b38dd894c869ca52f7f5b0608a1" Name="Diagram1">
+        <EntityTypeShape EntityType="IntegrationMakerModel.Integration" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.IntegrationCredential" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.IntegrationErrorCode" Width="1.5" PointX="9" PointY="5.875" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.IntegrationType" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.IntegrationLog" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" FillColor="Lime" />
+        <AssociationConnector Association="IntegrationMakerModel.FK_Integration_IntegrationType" ManuallyRouted="false" />
+        <AssociationConnector Association="IntegrationMakerModel.FK_IntegrationCredential_Integration" ManuallyRouted="false" />
+        <AssociationConnector Association="IntegrationMakerModel.FK_IntegrationLog_Integration" ManuallyRouted="false" />
+        <AssociationConnector Association="IntegrationMakerModel.FK_IntegrationLog_IntegrationErrorCode" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.Job" Width="1.5" PointX="0.75" PointY="7.375" FillColor="192, 0, 192" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.JobLog" Width="1.5" PointX="3" PointY="8.75" FillColor="192, 0, 192" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.JobState" Width="1.5" PointX="5" PointY="6" FillColor="192, 0, 192" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.JobTransferDetail" Width="1.5" PointX="3" PointY="6" FillColor="192, 0, 192" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.JobType" Width="1.5" PointX="0.75" PointY="5.125" FillColor="192, 0, 192" />
+        <AssociationConnector Association="IntegrationMakerModel.FK_JobLog_Job" />
+        <AssociationConnector Association="IntegrationMakerModel.FK_JobTransferDetail_Job" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.Company" Width="1.5" PointX="4.75" PointY="0.5" FillColor="Red" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.CompanyUser" Width="1.5" PointX="7.125" PointY="0.5" FillColor="Red" />
+        <AssociationConnector Association="IntegrationMakerModel.FK_CompanyUser_Company" />
+        <AssociationConnector Association="IntegrationMakerModel.FK_Integration_Company" />
+        <EntityTypeShape EntityType="IntegrationMakerModel.EconomicAPP" Width="1.5" PointX="5.375" PointY="8.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
