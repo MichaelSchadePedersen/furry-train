@@ -39,8 +39,6 @@ namespace IntegrationMaker.Controllers
         [SwaggerOperation("GetAll")]
         public HttpResponseMessage Get()
         {
-            HasRequiredScopes(ReadPermission);
-            string owner = ClaimsPrincipal.Current.FindFirst(objectIdElement).Value;
             var service = new GetIntegrationService();
            var integrations = service.GetIntegrations();
            return Request.CreateResponse<List<IntegrationModel>>(System.Net.HttpStatusCode.Accepted, integrations);

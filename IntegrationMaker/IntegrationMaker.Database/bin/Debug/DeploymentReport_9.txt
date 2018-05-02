@@ -1,0 +1,38 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Company] (Table)
+       [dbo].[CompanyUser] (Table)
+       [dbo].[EconomicAPP] (Table)
+       [dbo].[Integration] (Table)
+       [dbo].[IntegrationCredential] (Table)
+       [dbo].[IntegrationErrorCode] (Table)
+       [dbo].[IntegrationLog] (Table)
+       [dbo].[IntegrationType] (Table)
+       [dbo].[Job] (Table)
+       [dbo].[JobLog] (Table)
+       [dbo].[JobState] (Table)
+       [dbo].[JobTransferDetail] (Table)
+       [dbo].[JobType] (Table)
+       [dbo].[Ledgers] (Table)
+       Default Constraint: unnamed constraint on [dbo].[Job] (Default Constraint)
+       [dbo].[FK_CompanyUser_Company] (Foreign Key)
+       [dbo].[FK_Integration_IntegrationType] (Foreign Key)
+       [dbo].[FK_Integration_Company] (Foreign Key)
+       [dbo].[FK_IntegrationCredential_Integration] (Foreign Key)
+       [dbo].[FK_IntegrationLog_Integration] (Foreign Key)
+       [dbo].[FK_IntegrationLog_IntegrationErrorCode] (Foreign Key)
+       [dbo].[FK_JobLog_Job] (Foreign Key)
+       [dbo].[FK_JobTransferDetail_Job] (Foreign Key)
+       [dbo].[FK_Ledger_Company] (Foreign Key)
+
+** Supporting actions

@@ -63,7 +63,7 @@
     <Build Include="Tables\Integration.sql" />
     <Build Include="Tables\IntegrationErrorCode.sql" />
     <Build Include="Tables\IntegrationType.sql" />
-    <Build Include="Tables\IntegrationDetail.sql" />
+    <Build Include="Tables\IntegrationCredential.sql" />
     <Build Include="Tables\IntegrationLog.sql" />
     <Build Include="Tables\Job.sql" />
     <Build Include="Tables\JobType.sql" />
@@ -73,6 +73,7 @@
     <Build Include="Tables\Company.sql" />
     <Build Include="Tables\CompanyUser.sql" />
     <Build Include="Tables\EconomicAPP.sql" />
+    <Build Include="Tables\Ledgers.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="StaticData.sql">

@@ -13,6 +13,10 @@ INSERT INTO [dbo].[IntegrationType]
            (Name,CreatedUTC)
      VALUES
            ('economic','2018-03-27')
+INSERT INTO [dbo].[IntegrationType]
+           (Name,CreatedUTC)
+     VALUES
+           ('Dynamic365BusinessCentral','2018-05-2')
 
 
 INSERT INTO [dbo].[EconomicAPP]
